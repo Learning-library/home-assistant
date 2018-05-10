@@ -1,0 +1,10 @@
+coin_market:
+  name: 电子货币
+  entities: sensor.trade_volume, sensor.exchange_rate_1_btc
+
+
+tab_coinmarket:
+  view: yes
+  name: 电子货币
+  icon: mdi:currency-btc
+  entities: group.coin_market

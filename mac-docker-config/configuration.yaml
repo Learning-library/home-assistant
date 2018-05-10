@@ -58,13 +58,26 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+  - platform: bitcoin
+    display_options:
+      - exchangerate
+      - trade_volume_btc
+  - platform: etherscan
+    address: '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359'
 
 # Text to speech
 tts:
   - platform: google
-
+# camera这个配置项有三个值，分别对应三个摄像头；
+# 每个摄像头又有各自不同的配置项和对应的值。
+camera:
+  - platform: mjpeg
+    mjpeg_url: http://cdn-blog.oss-cn-beijing.aliyuncs.com/17-10-19/36125309.jpg
+    name: camera1
 # Cloud
 cloud:
+
+
 
 group: !include groups.yaml
 automation: !include automations.yaml

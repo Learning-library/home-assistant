@@ -58,6 +58,7 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+    name: 天气
     forecast: 24           #未来24小时天气，可有手工按需修改
     monitored_conditions:
       - temperature        #气温

@@ -1,10 +1,18 @@
 coin_market:
   name: 电子货币
-  entities: sensor.trade_volume, sensor.exchange_rate_1_btc
+  entities: sensor.trade_volume, sensor.exchange_rate_1_btc,sensor.eth_balance
 
 
-tab_coinmarket:
-  view: yes
-  name: 电子货币
-  icon: mdi:currency-btc
-  entities: group.coin_market
+#tab_coinmarket:
+#  view: yes
+#  name: 电子货币
+#  icon: mdi:currency-btc
+#  entities: group.coin_market
+
+coin_market_sys:
+  name: 系统信息
+  entities: sensor.cpu_temperature, sensor.last_boot,sensor.memory_free,sensor.memory_use_percent,sensor.processor_use
+
+coin_market_sun:
+  name: 太阳信息
+  entities: sensor.sunrise_time,sensor.sunset_time

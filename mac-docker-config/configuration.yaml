@@ -58,6 +58,14 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+    forecast: 24           #未来24小时天气，可有手工按需修改
+    monitored_conditions:
+      - temperature        #气温
+      - precipitation      #雨量
+      - windSpeed          #风速
+      - pressure           #气压
+      - windDirection      #风向
+      - humidity           #湿度
   - platform: bitcoin
     display_options:
       - exchangerate
@@ -105,6 +113,19 @@ sensor:
 #      - 'time_utc'
 #      - 'beat'
 
+#测速
+  - platform: speedtest
+    minute: 30
+    hour:
+      - 0
+      - 6
+      - 12
+      - 18
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
 
 # Text to speech
 tts:
@@ -118,6 +139,23 @@ camera:
 # Cloud
 cloud:
 
+#媒体播放器
+media_player :
+  - platform: vlc
+    name: vlc_player
+
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+mqtt:
+  broker: m14.cloudmqtt.com
+  port: 16833
+  client_id: 888888
+  keepalive: 60
+  username: xdfggaoa
+  password: qzEIbtGanCgm
 
 
 group: !include groups.yaml

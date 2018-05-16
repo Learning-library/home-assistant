@@ -14,5 +14,23 @@ coin_market_sys:
   entities: sensor.cpu_temperature, sensor.last_boot,sensor.memory_free,sensor.memory_use_percent,sensor.processor_use
 
 coin_market_sun:
-  name: 太阳信息
-  entities: sensor.sunrise_time,sensor.sunset_time
+  name: 天气信息
+  entities:
+    - sensor.sunrise_time
+    - sensor.sunset_time
+    - sensor._pressure
+    - sensor._humidity
+    - sensor._precipitation
+    - sensor._temperature
+    - sensor._wind_direction
+    - sensor._wind_speed
+    - sun.sun
+
+
+coin_market_intnet:
+  name: 我的网络
+  view: no
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
